@@ -620,5 +620,5 @@ const html = [
   '</html>'
 ].join('\n');
 
-fs.writeFileSync(path.join(__dirname, 'index.html'), html);
+fs.writeFileSync(path.join(__dirname, 'public' ,'index.html'), html);
 console.log('Generated full Thirukkural book with ' + chapters.length + ' chapters and ' + sourceKurals.length + ' kurals.');

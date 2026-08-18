@@ -8,7 +8,7 @@ fs.mkdirSync(outDir, { recursive: true });
 (async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
-  const url = 'file:///' + path.resolve(__dirname, 'index.html').replace(/\\/g, '/');
+  const url = 'file:///' + path.resolve(__dirname, 'public', 'index.html').replace(/\\/g, '/');
 
   await page.goto(url);
   await page.waitForTimeout(600);

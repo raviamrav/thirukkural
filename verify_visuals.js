@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const artifactDir = 'C:\\Users\\ravia\\.gemini\\antigravity-ide\\brain\\1fbe5234-1e35-4c84-bad5-d28126eb3c4b';
-const htmlPath = 'file:///' + path.resolve(__dirname, 'index.html').replace(/\\/g, '/');
+const htmlPath = 'file:///' + path.resolve(__dirname, 'public', 'index.html').replace(/\\/g, '/');
 
 (async () => {
   console.log('Launching browser...');
