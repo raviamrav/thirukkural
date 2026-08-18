@@ -1,0 +1,9 @@
+What to do next time
+Replace the cover image in thiruvalluvar.png or thiruvalluvar.jpeg
+Run:
+npm run generate:book
+
+That command regenerates:
+user_img_b64.txt
+book_app.js
+index.html

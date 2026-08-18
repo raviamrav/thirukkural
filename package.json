@@ -1,0 +1,25 @@
+{
+  "name": "thirukural",
+  "version": "1.0.0",
+  "description": "Thirukkural Interactive 3D Flip-Book UI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node verify_full_book.js",
+    "generate:book": "node generate_full_book.js",
+    "regenerate:de": "node regenerate_de_from_en.js"
+  },
+  "keywords": [
+    "thirukkural",
+    "flip-book",
+    "3d",
+    "tamil"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "google-translate-api-x": "^10.7.3",
+    "playwright": "^1.62.1"
+  }
+}

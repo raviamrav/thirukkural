@@ -1,0 +1,804 @@
+[
+  {
+    "tamil": "திருக்குறள்",
+    "section": {
+      "tamil": "பால்",
+      "detail": [
+        {
+          "number": 1,
+          "chapterGroup": {
+            "tamil": "இயல்",
+            "detail": [
+              {
+                "number": 1,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 1,
+                      "start": 1,
+                      "end": 10
+                    },
+                    {
+                      "number": 2,
+                      "start": 11,
+                      "end": 20
+                    },
+                    {
+                      "number": 3,
+                      "start": 21,
+                      "end": 30
+                    },
+                    {
+                      "number": 4,
+                      "start": 31,
+                      "end": 40
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 2,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 5,
+                      "start": 41,
+                      "end": 50
+                    },
+                    {
+                      "number": 6,
+                      "start": 51,
+                      "end": 60
+                    },
+                    {
+                      "number": 7,
+                      "start": 61,
+                      "end": 70
+                    },
+                    {
+                      "number": 8,
+                      "start": 71,
+                      "end": 80
+                    },
+                    {
+                      "number": 9,
+                      "start": 81,
+                      "end": 90
+                    },
+                    {
+                      "number": 10,
+                      "start": 91,
+                      "end": 100
+                    },
+                    {
+                      "number": 11,
+                      "start": 101,
+                      "end": 110
+                    },
+                    {
+                      "number": 12,
+                      "start": 111,
+                      "end": 120
+                    },
+                    {
+                      "number": 13,
+                      "start": 121,
+                      "end": 130
+                    },
+                    {
+                      "number": 14,
+                      "start": 131,
+                      "end": 140
+                    },
+                    {
+                      "number": 15,
+                      "start": 141,
+                      "end": 150
+                    },
+                    {
+                      "number": 16,
+                      "start": 151,
+                      "end": 160
+                    },
+                    {
+                      "number": 17,
+                      "start": 161,
+                      "end": 170
+                    },
+                    {
+                      "number": 18,
+                      "start": 171,
+                      "end": 180
+                    },
+                    {
+                      "number": 19,
+                      "start": 181,
+                      "end": 190
+                    },
+                    {
+                      "number": 20,
+                      "start": 191,
+                      "end": 200
+                    },
+                    {
+                      "number": 21,
+                      "start": 201,
+                      "end": 210
+                    },
+                    {
+                      "number": 22,
+                      "start": 211,
+                      "end": 220
+                    },
+                    {
+                      "number": 23,
+                      "start": 221,
+                      "end": 230
+                    },
+                    {
+                      "number": 24,
+                      "start": 231,
+                      "end": 240
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 3,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 25,
+                      "start": 241,
+                      "end": 250
+                    },
+                    {
+                      "number": 26,
+                      "start": 251,
+                      "end": 260
+                    },
+                    {
+                      "number": 27,
+                      "start": 261,
+                      "end": 270
+                    },
+                    {
+                      "number": 28,
+                      "start": 271,
+                      "end": 280
+                    },
+                    {
+                      "number": 29,
+                      "start": 281,
+                      "end": 290
+                    },
+                    {
+                      "number": 30,
+                      "start": 291,
+                      "end": 300
+                    },
+                    {
+                      "number": 31,
+                      "start": 301,
+                      "end": 310
+                    },
+                    {
+                      "number": 32,
+                      "start": 311,
+                      "end": 320
+                    },
+                    {
+                      "number": 33,
+                      "start": 321,
+                      "end": 330
+                    },
+                    {
+                      "number": 34,
+                      "start": 331,
+                      "end": 340
+                    },
+                    {
+                      "number": 35,
+                      "start": 341,
+                      "end": 350
+                    },
+                    {
+                      "number": 36,
+                      "start": 351,
+                      "end": 360
+                    },
+                    {
+                      "number": 37,
+                      "start": 361,
+                      "end": 370
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 4,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 38,
+                      "start": 371,
+                      "end": 380
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "chapterGroup": {
+            "tamil": "இயல்",
+            "detail": [
+              {
+                "number": 5,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 39,
+                      "start": 381,
+                      "end": 390
+                    },
+                    {
+                      "number": 40,
+                      "start": 391,
+                      "end": 400
+                    },
+                    {
+                      "number": 41,
+                      "start": 401,
+                      "end": 410
+                    },
+                    {
+                      "number": 42,
+                      "start": 411,
+                      "end": 420
+                    },
+                    {
+                      "number": 43,
+                      "start": 421,
+                      "end": 430
+                    },
+                    {
+                      "number": 44,
+                      "start": 431,
+                      "end": 440
+                    },
+                    {
+                      "number": 45,
+                      "start": 441,
+                      "end": 450
+                    },
+                    {
+                      "number": 46,
+                      "start": 451,
+                      "end": 460
+                    },
+                    {
+                      "number": 47,
+                      "start": 461,
+                      "end": 470
+                    },
+                    {
+                      "number": 48,
+                      "start": 471,
+                      "end": 480
+                    },
+                    {
+                      "number": 49,
+                      "start": 481,
+                      "end": 490
+                    },
+                    {
+                      "number": 50,
+                      "start": 491,
+                      "end": 500
+                    },
+                    {
+                      "number": 51,
+                      "start": 501,
+                      "end": 510
+                    },
+                    {
+                      "number": 52,
+                      "start": 511,
+                      "end": 520
+                    },
+                    {
+                      "number": 53,
+                      "start": 521,
+                      "end": 530
+                    },
+                    {
+                      "number": 54,
+                      "start": 531,
+                      "end": 540
+                    },
+                    {
+                      "number": 55,
+                      "start": 541,
+                      "end": 550
+                    },
+                    {
+                      "number": 56,
+                      "start": 551,
+                      "end": 560
+                    },
+                    {
+                      "number": 57,
+                      "start": 561,
+                      "end": 570
+                    },
+                    {
+                      "number": 58,
+                      "start": 571,
+                      "end": 580
+                    },
+                    {
+                      "number": 59,
+                      "start": 581,
+                      "end": 590
+                    },
+                    {
+                      "number": 60,
+                      "start": 591,
+                      "end": 600
+                    },
+                    {
+                      "number": 61,
+                      "start": 601,
+                      "end": 610
+                    },
+                    {
+                      "number": 62,
+                      "start": 611,
+                      "end": 620
+                    },
+                    {
+                      "number": 63,
+                      "start": 621,
+                      "end": 630
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 6,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 64,
+                      "start": 631,
+                      "end": 640
+                    },
+                    {
+                      "number": 65,
+                      "start": 641,
+                      "end": 650
+                    },
+                    {
+                      "number": 66,
+                      "start": 651,
+                      "end": 660
+                    },
+                    {
+                      "number": 67,
+                      "start": 661,
+                      "end": 670
+                    },
+                    {
+                      "number": 68,
+                      "start": 671,
+                      "end": 680
+                    },
+                    {
+                      "number": 69,
+                      "start": 681,
+                      "end": 690
+                    },
+                    {
+                      "number": 70,
+                      "start": 691,
+                      "end": 700
+                    },
+                    {
+                      "number": 71,
+                      "start": 701,
+                      "end": 710
+                    },
+                    {
+                      "number": 72,
+                      "start": 711,
+                      "end": 720
+                    },
+                    {
+                      "number": 73,
+                      "start": 721,
+                      "end": 730
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 7,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 74,
+                      "start": 731,
+                      "end": 740
+                    },
+                    {
+                      "number": 75,
+                      "start": 741,
+                      "end": 750
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 8,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 76,
+                      "start": 751,
+                      "end": 760
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 9,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 77,
+                      "start": 761,
+                      "end": 770
+                    },
+                    {
+                      "number": 78,
+                      "start": 771,
+                      "end": 780
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 10,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 79,
+                      "start": 781,
+                      "end": 790
+                    },
+                    {
+                      "number": 80,
+                      "start": 791,
+                      "end": 800
+                    },
+                    {
+                      "number": 81,
+                      "start": 801,
+                      "end": 810
+                    },
+                    {
+                      "number": 82,
+                      "start": 811,
+                      "end": 820
+                    },
+                    {
+                      "number": 83,
+                      "start": 821,
+                      "end": 830
+                    },
+                    {
+                      "number": 84,
+                      "start": 831,
+                      "end": 840
+                    },
+                    {
+                      "number": 85,
+                      "start": 841,
+                      "end": 850
+                    },
+                    {
+                      "number": 86,
+                      "start": 851,
+                      "end": 860
+                    },
+                    {
+                      "number": 87,
+                      "start": 861,
+                      "end": 870
+                    },
+                    {
+                      "number": 88,
+                      "start": 871,
+                      "end": 880
+                    },
+                    {
+                      "number": 89,
+                      "start": 881,
+                      "end": 890
+                    },
+                    {
+                      "number": 90,
+                      "start": 891,
+                      "end": 900
+                    },
+                    {
+                      "number": 91,
+                      "start": 901,
+                      "end": 910
+                    },
+                    {
+                      "number": 92,
+                      "start": 911,
+                      "end": 920
+                    },
+                    {
+                      "number": 93,
+                      "start": 921,
+                      "end": 930
+                    },
+                    {
+                      "number": 94,
+                      "start": 931,
+                      "end": 940
+                    },
+                    {
+                      "number": 95,
+                      "start": 941,
+                      "end": 950
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 11,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 96,
+                      "start": 951,
+                      "end": 960
+                    },
+                    {
+                      "number": 97,
+                      "start": 961,
+                      "end": 970
+                    },
+                    {
+                      "number": 98,
+                      "start": 971,
+                      "end": 980
+                    },
+                    {
+                      "number": 99,
+                      "start": 981,
+                      "end": 990
+                    },
+                    {
+                      "number": 100,
+                      "start": 991,
+                      "end": 1000
+                    },
+                    {
+                      "number": 101,
+                      "start": 1001,
+                      "end": 1010
+                    },
+                    {
+                      "number": 102,
+                      "start": 1011,
+                      "end": 1020
+                    },
+                    {
+                      "number": 103,
+                      "start": 1021,
+                      "end": 1030
+                    },
+                    {
+                      "number": 104,
+                      "start": 1031,
+                      "end": 1040
+                    },
+                    {
+                      "number": 105,
+                      "start": 1041,
+                      "end": 1050
+                    },
+                    {
+                      "number": 106,
+                      "start": 1051,
+                      "end": 1060
+                    },
+                    {
+                      "number": 107,
+                      "start": 1061,
+                      "end": 1070
+                    },
+                    {
+                      "number": 108,
+                      "start": 1071,
+                      "end": 1080
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "chapterGroup": {
+            "tamil": "இயல்",
+            "detail": [
+              {
+                "number": 12,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 109,
+                      "start": 1081,
+                      "end": 1090
+                    },
+                    {
+                      "number": 110,
+                      "start": 1091,
+                      "end": 1100
+                    },
+                    {
+                      "number": 111,
+                      "start": 1101,
+                      "end": 1110
+                    },
+                    {
+                      "number": 112,
+                      "start": 1111,
+                      "end": 1120
+                    },
+                    {
+                      "number": 113,
+                      "start": 1121,
+                      "end": 1130
+                    },
+                    {
+                      "number": 114,
+                      "start": 1131,
+                      "end": 1140
+                    },
+                    {
+                      "number": 115,
+                      "start": 1141,
+                      "end": 1150
+                    },
+                    {
+                      "number": 116,
+                      "start": 1151,
+                      "end": 1160
+                    }
+                  ]
+                }
+              },
+              {
+                "number": 13,
+                "chapters": {
+                  "tamil": "அதிகாரம்",
+                  "detail": [
+                    {
+                      "number": 117,
+                      "start": 1161,
+                      "end": 1170
+                    },
+                    {
+                      "number": 118,
+                      "start": 1171,
+                      "end": 1180
+                    },
+                    {
+                      "number": 119,
+                      "start": 1181,
+                      "end": 1190
+                    },
+                    {
+                      "number": 120,
+                      "start": 1191,
+                      "end": 1200
+                    },
+                    {
+                      "number": 121,
+                      "start": 1201,
+                      "end": 1210
+                    },
+                    {
+                      "number": 122,
+                      "start": 1211,
+                      "end": 1220
+                    },
+                    {
+                      "number": 123,
+                      "start": 1221,
+                      "end": 1230
+                    },
+                    {
+                      "number": 124,
+                      "start": 1231,
+                      "end": 1240
+                    },
+                    {
+                      "number": 125,
+                      "start": 1241,
+                      "end": 1250
+                    },
+                    {
+                      "number": 126,
+                      "start": 1251,
+                      "end": 1260
+                    },
+                    {
+                      "number": 127,
+                      "start": 1261,
+                      "end": 1270
+                    },
+                    {
+                      "number": 128,
+                      "start": 1271,
+                      "end": 1280
+                    },
+                    {
+                      "number": 129,
+                      "start": 1281,
+                      "end": 1290
+                    },
+                    {
+                      "number": 130,
+                      "start": 1291,
+                      "end": 1300
+                    },
+                    {
+                      "number": 131,
+                      "start": 1301,
+                      "end": 1310
+                    },
+                    {
+                      "number": 132,
+                      "start": 1311,
+                      "end": 1320
+                    },
+                    {
+                      "number": 133,
+                      "start": 1321,
+                      "end": 1330
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "repo": "http://github.com/tk120404/thirukkural"
+  }
+]

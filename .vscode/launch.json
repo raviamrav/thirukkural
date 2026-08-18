@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Thirukkural in Chrome (Ctrl+F5)",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}/index.html"
+        },
+        {
+            "name": "Launch Thirukkural in Edge (Ctrl+F5)",
+            "type": "msedge",
+            "request": "launch",
+            "file": "${workspaceFolder}/index.html"
+        },
+        {
+            "name": "Run Local Node Server (npm start)",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/server.js"
+        }
+    ]
+}
