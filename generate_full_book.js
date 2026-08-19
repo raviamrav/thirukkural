@@ -180,7 +180,7 @@ const css = [
   '.page::before { content: ""; position: absolute; inset: -11px; border: 1px solid rgba(151,108,38,.75); box-shadow: inset 0 0 0 3px rgba(151,108,38,.12); pointer-events: none; }',
   '.cover { inset: 0; padding: 18px; align-items: center; justify-content: center; text-align: center; color: #ebcc83; background: radial-gradient(circle at 50% 22%, #743030 0%, #4b1212 42%, #1a0404 100%); border: 3px solid var(--gold); }',
   '.cover::before { inset: 12px; border: 2px solid rgba(212,175,55,.72); box-shadow: inset 0 0 0 2px rgba(0,0,0,.22); }',
-  '.portrait { width: 90%; height: 62%; border: 2px solid var(--gold); border-radius: 7px; overflow: hidden; background: #300909; margin-bottom: 16px; }',
+  '.portrait { width: 75%; height: 75%; border: 4px; border-radius: 7px; overflow: hidden; background: #300909; margin-bottom: 16px; }',
   '.portrait img { width: 100%; height: 100%; object-fit: contain; object-position: center center; display: block; background-color: #300909; }',
   '.cover h1 { margin: 0; font-size: clamp(30px, 4vw, 44px); line-height: 1.08; color: var(--gold); letter-spacing: 0; text-shadow: 0 2px 8px rgba(0,0,0,.8); }',
   '.cover p { margin: 6px 0 0; font-size: 15px; }',
@@ -334,7 +334,7 @@ const appScript = [
   'function coverPage(back = false) {',
   '  return {',
   '    kind: "cover",',
-  '    html: "<section class=\\"page cover\\">" + (!back && COVER_IMAGE ? "<div class=\\"portrait\\"><img src=\\"data:image/jpeg;base64," + COVER_IMAGE + "\\" alt=\\"திருவள்ளுவர்\\"></div>" : "") + "<h1>" + (back ? "முற்றிற்று" : "திருக்குறள்") + "</h1><p>" + (back ? "திருவள்ளுவர் அருளிய 1330 குறள்கள்" : "திருவள்ளுவர்") + "</p><p>" + (back ? "அறம் · பொருள் · இன்பம்" : "முழு தமிழ் நூல்") + "</p></section>"',
+  '    html: "<section class=\\"page cover\\">" + (!back && COVER_IMAGE ? "<div class=\\"portrait\\"><img title=\\"Artist  A. Singaravelu\\" src=\\"data:image/jpeg;base64," + COVER_IMAGE + "\\" alt=\\"திருவள்ளுவர்\\"></div>" : "") + "<h1>" + (back ? "முற்றிற்று" : "திருக்குறள்") + "</h1><p>" + (back ? "திருவள்ளுவர் அருளிய 1330 குறள்கள்" : "திருவள்ளுவர்") + "</p><p>" + (back ? "அறம் · பொருள் · இன்பம்" : "முழு தமிழ் நூல்") + "</p></section>"',
   '  };',
   '}',
   '',
@@ -601,7 +601,7 @@ const appScript = [
 ].join('\n');
 
 // write the app script as a separate file to avoid inline-embedding and quoting issues
-fs.writeFileSync(path.join(__dirname, 'book_app.js'), appScript);
+fs.writeFileSync(path.join(__dirname, 'public','book_app.js'), appScript);
 
 const html = [
   '<!DOCTYPE html>',
