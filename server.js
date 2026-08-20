@@ -16,7 +16,7 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url.split('?')[0]);
+  let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url.split('?')[0]);
   let ext = path.extname(filePath);
   
   fs.readFile(filePath, (err, content) => {

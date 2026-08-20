@@ -86,7 +86,7 @@ button:hover, select:hover { background: #3b291a; }
 .page::before { content: ""; position: absolute; inset: -11px; border: 1px solid rgba(151,108,38,.75); box-shadow: inset 0 0 0 3px rgba(151,108,38,.12); pointer-events: none; }
 .cover { inset: 0; padding: 18px; align-items: center; justify-content: center; text-align: center; color: #ebcc83; background: radial-gradient(circle at 50% 22%, #743030 0%, #4b1212 42%, #1a0404 100%); border: 3px solid var(--gold); }
 .cover::before { inset: 12px; border: 2px solid rgba(212,175,55,.72); box-shadow: inset 0 0 0 2px rgba(0,0,0,.22); }
-.portrait { width: 90%; height: 62%; border: 2px solid var(--gold); border-radius: 7px; overflow: hidden; background: #300909; margin-bottom: 16px; }
+.portrait { width: 75%; height: 75%; border: 4px; border-radius: 7px; overflow: hidden; background: #300909; margin-bottom: 16px; }
 .portrait img { width: 100%; height: 100%; object-fit: contain; object-position: center center; display: block; background-color: #300909; }
 .cover h1 { margin: 0; font-size: clamp(30px, 4vw, 44px); line-height: 1.08; color: var(--gold); letter-spacing: 0; text-shadow: 0 2px 8px rgba(0,0,0,.8); }
 .cover p { margin: 6px 0 0; font-size: 15px; }
@@ -100,6 +100,8 @@ button:hover, select:hover { background: #3b291a; }
 .toc-item:hover { background: rgba(212,175,55,.2); }
 .toc-num { color: #7b3517; font-weight: 700; }
 .toc-page { color: #72583e; font-size: 10px; white-space: nowrap; }
+.toc-item.selected { background: linear-gradient(90deg, rgba(212,175,55,.42), rgba(212,175,55,.18)); border-color: var(--gold); box-shadow: inset 0 0 0 1px rgba(212,175,55,.5); }
+.toc-item.selected .toc-num { color: #5d1b0e; }
 .leaf { cursor: grab; }
 .leaf.dragging { cursor: grabbing; }
 .chapter-meta { display: grid; gap: 2px; text-align: center; color: #6b3216; font-size: 12px; }
@@ -127,17 +129,20 @@ body[data-lang="de"] .lang-de { display: block; }
 .corner-back::after { left: 0; border-radius: 0 100% 0 0; }
 .bottom-bar { justify-content: center; }
 .bottom-bar button { width: 42px; padding: 0; border-radius: 50%; }
-@media (max-width: 720px) {
-  body { padding: 6px; grid-template-rows: auto 1fr auto; }
-  .top-bar { gap: 6px; padding: 6px; }
+@media (max-width: 720px), (max-height: 500px) {
+  body { padding: 6px; grid-template-rows: auto 1fr auto; gap: 6px; }
+  .top-bar { gap: 8px; padding: 7px 8px; flex-wrap: wrap; align-items: center; }
   .brand { display: none; }
-  .jump { justify-content: flex-start; }
+  .jump { justify-content: flex-start; flex: 1 1 100%; order: 1; }
   .jump label { display: none; }
-  .tools { gap: 6px; }
-  .language-control button { min-width: 29px; height: 26px; padding: 0 7px; font-size: 11px; }
-  select { min-width: 0; width: 100%; font-size: 11px; }
+  .jump select { flex: 1 1 0; width: auto; min-width: 0; }
+  .jump button { flex: 0 0 auto; min-width: 34px; height: 30px; }
+  .tools { flex: 1 1 auto; order: 2; gap: 6px; justify-content: flex-end; }
+  .language-control button { min-width: 30px; height: 26px; padding: 0 9px; font-size: 11px; }
+  select { min-width: 0; width: auto; font-size: 11px; }
   .page-indicator { display: none; }
-  .scene { width: 98vw; height: calc(100vh - 96px); }
+  .page-language-label { display: none !important; }
+  .scene { width: 100%; height: 100%; min-height: 0; }
   .book-outer-frame { padding: 4px; }
   .page { inset: 15px 13px; gap: 5px; }
   .page::before { inset: -7px; }
@@ -175,8 +180,6 @@ body[data-lang="de"] .lang-de { display: block; }
         <button type="button" class="active" data-lang-option="en" aria-pressed="true">EN</button>
         <button type="button" data-lang-option="de" aria-pressed="false">DE</button>
       </div>
-      <div class="page-indicator" id="pageInfo">முன் அட்டை</div>
-      <div id="pageLanguageLabel" class="page-language-label" style="display:none;"></div>
     </div>
   </div>
 

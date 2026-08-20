@@ -11,6 +11,7 @@ let rightIndex = 0;
 let dragging = null;
 let currentLanguage = "en";
 let openKuralNumber = null;
+let selectedTocChapter = null;
 
 function translatedChapterTitle(chapter, lang) {
   if (lang === "de") return (chapter.deTitle || chapter.translation || chapter.name || "").trim();
@@ -41,7 +42,7 @@ function rightIndexForChapter(chapterNumber) { return chapterNumber + 1; }
 function coverPage(back = false) {
   return {
     kind: "cover",
-    html: "<section class=\"page cover\">" + (!back && COVER_IMAGE ? "<div class=\"portrait\"><img src=\"data:image/jpeg;base64," + COVER_IMAGE + "\" alt=\"திருவள்ளுவர்\"></div>" : "") + "<h1>" + (back ? "முற்றிற்று" : "திருக்குறள்") + "</h1><p>" + (back ? "திருவள்ளுவர் அருளிய 1330 குறள்கள்" : "திருவள்ளுவர்") + "</p><p>" + (back ? "அறம் · பொருள் · இன்பம்" : "முழு தமிழ் நூல்") + "</p></section>"
+    html: "<section class=\"page cover\">" + (!back && COVER_IMAGE ? "<div class=\"portrait\"><img title=\"Artist  A. Singaravelu\" src=\"data:image/jpeg;base64," + COVER_IMAGE + "\" alt=\"திருவள்ளுவர்\"></div>" : "") + "<h1>" + (back ? "முற்றிற்று" : "திருக்குறள்") + "</h1><p>" + (back ? "திருவள்ளுவர் அருளிய 1330 குறள்கள்" : "திருவள்ளுவர்") + "</p><p>" + (back ? "அறம் · பொருள் · இன்பம்" : "முழு தமிழ் நூல்") + "</p></section>"
   };
 }
 
@@ -54,7 +55,8 @@ function tocPage(pageIndex) {
     const groupLabel = pageIndex === 0 ? (chapter.section + " · " + chapter.group) : (translatedSection(chapter, currentLanguage) + " · " + translatedGroup(chapter, currentLanguage));
     const group = groupLabel !== lastGroup ? (lastGroup = groupLabel, "<div class=\"toc-group\">" + escapeHtml(groupLabel) + "</div>") : "";
     const titleText = pageIndex === 0 ? chapter.name : translatedChapterTitle(chapter, currentLanguage);
-    return group + "<div class=\"toc-item\" data-chapter=\"" + chapter.number + "\">" + "<span class=\"toc-num\">" + chapter.number + "</span><span>" + escapeHtml(titleText) + "</span><span class=\"toc-page\">" + (pageIndex === 0 ? "பக். " : "") + pageNumberForChapter(chapter.number) + "</span></div>";
+    const selected = selectedTocChapter !== null && chapter.number === selectedTocChapter ? " selected" : "";
+    return group + "<div class=\"toc-item" + selected + "\" data-chapter=\"" + chapter.number + "\">" + "<span class=\"toc-num\">" + chapter.number + "</span><span>" + escapeHtml(titleText) + "</span><span class=\"toc-page\">" + (pageIndex === 0 ? "பக். " : "") + pageNumberForChapter(chapter.number) + "</span></div>";
   }).join("");
   const title = pageIndex === 0 ? "<h2 class=\"page-title\">பொருளடக்கம்</h2>" : "<h2 class=\"page-title\"><span class=\"lang-en\">Table of Contents</span><span class=\"lang-de\">Inhaltsverzeichnis</span></h2>";
   const subtitle = pageIndex === 0 ? "அதிகாரத்தைத் தேர்ந்தெடுக்கவும்" : (currentLanguage === "de" ? "Wähle ein Kapitel" : "Select a chapter");
@@ -134,6 +136,7 @@ function updateStatus() {
   if (rightIndex === 1) { info.textContent = "பொருளடக்கம்"; labelEl.style.display = "block"; labelEl.textContent = currentLanguage === "de" ? "Deutsche Fassung" : "English Translation"; return; }
   const chapterNumber = Math.max(1, Math.min(DATA.chapters.length, rightIndex - 1));
   const chapter = DATA.chapters[chapterNumber - 1];
+  selectedTocChapter = chapter.number;
   info.textContent = "அதிகாரம் " + chapter.number + ": " + chapter.name;
   chapterSelect.value = String(chapter.number);
   if (translatedSelect) translatedSelect.value = String(chapter.number);
@@ -159,6 +162,9 @@ function updateLeaves() {
     frontFace.style.pointerEvents = flipped ? "none" : "auto";
     backFace.style.pointerEvents = flipped ? "auto" : "none";
   });
+  if (rightIndex === 1 && selectedTocChapter !== null) {
+    document.querySelectorAll(".toc-item").forEach((item) => { item.classList.toggle("selected", Number(item.dataset.chapter) === selectedTocChapter); });
+  }
   updateStatus();
 }
 
@@ -170,14 +176,26 @@ function selectChapter(chapterNumber) { goToRightIndex(rightIndexForChapter(Numb
 function populateChapterSelect() {
   const select = document.getElementById("chapterSelect");
   select.innerHTML = DATA.chapters.map((chapter) => "<option value=\"" + chapter.number + "\">" + chapter.number + ". " + escapeHtml(chapter.name) + " · " + escapeHtml(chapter.section) + "</option>").join("");
-  select.addEventListener("change", (event) => selectChapter(event.target.value));
+  select.addEventListener("change", (event) => {
+    const val = event.target.value;
+    const other = document.getElementById("chapterSelectTranslated");
+    if (other && other.value !== val) other.value = val;
+    selectChapter(val);
+  });
 }
 
 function populateTranslatedSelect() {
   const select = document.getElementById("chapterSelectTranslated");
   if (!select) return;
+  const previous = select.value;
   select.innerHTML = DATA.chapters.map((chapter) => { const text = translatedChapterTitle(chapter, currentLanguage); const section = translatedSection(chapter, currentLanguage); return "<option value=\"" + chapter.number + "\">" + chapter.number + ". " + escapeHtml(text) + " · " + escapeHtml(section) + "</option>"; }).join("");
-  select.addEventListener("change", (event) => selectChapter(event.target.value));
+  if (previous) select.value = previous;
+  select.addEventListener("change", (event) => {
+    const val = event.target.value;
+    const other = document.getElementById("chapterSelect");
+    if (other && other.value !== val) other.value = val;
+    selectChapter(val);
+  });
 }
 
 function setLanguage(lang) {
@@ -287,7 +305,17 @@ function wireInteractions() {
   });
   bookEl.addEventListener("click", (event) => {
     const tocItem = event.target.closest(".toc-item");
-    if (tocItem) { selectChapter(tocItem.dataset.chapter); return; }
+    if (tocItem) {
+      const chapterNumber = Number(tocItem.dataset.chapter);
+      selectedTocChapter = chapterNumber;
+      document.querySelectorAll(".toc-item").forEach((item) => {
+        const isSel = Number(item.dataset.chapter) === chapterNumber;
+        item.classList.toggle("selected", isSel);
+        if (isSel) item.closest(".toc-list").scrollTop = item.offsetTop - item.closest(".toc-list").clientHeight / 2;
+      });
+      selectChapter(chapterNumber);
+      return;
+    }
     const fwd = event.target.closest(".corner-fwd");
     const back = event.target.closest(".corner-back");
     if (fwd && Number(fwd.closest(".leaf").dataset.idx) === rightIndex) { turnForward(); return; }
