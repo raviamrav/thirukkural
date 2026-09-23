@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const translate = require('google-translate-api-x');
 
-const inputPath = path.join(__dirname, 'data', 'thirukkural_EN.json');
+const inputPath = path.join(__dirname, 'data', 'thirukkural_en.json');
 const outputPath = path.join(__dirname, 'data', 'thirukkural_de.json');
 
 function sleep(ms) {
